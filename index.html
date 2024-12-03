@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab10</title>    
+  </head>
+  <body>
+
+<!--Q1-->
+<div id="output"></div>
+<script> function greetUser(name) {
+    document.getElementById("output").innerText= "Hello," + name + "how are you?";
+}
+</script>
+
+<!--Q2-->
+<p id="message">aerf</p>
+<button onclick="document.getElementById('message').innerText= 'Hello,World!'">click</button>
+   
+<!--Q3-->
+<input type="number" id="numberone">
+<input type="number" id="numbertwo">
+<button onclick="addNumbers()"></button>
+<div id="result"></div>
+
+<script>
+    function addNumbers(){
+        var numberone = parseFloat(document.getElementById('numberone').value);
+        var numbertwo = parseFloat(document.getElementById('numbertwo').value);
+        var sum = numberone + numbertwo;
+        document.getElementById('result').innerText = "result =" + sum;
+    }
+</script>
+
+<!--Q4-->
+<input type="text" id="text">
+<button id="button">button</button>
+<h1 id="title">title</h1>
+
+<script>
+    document.getElementById('button').addEventListener('click', function(){
+        var newtitle= document.getElementById('text').value;
+        document.getElementById('title').innerText = newtitle;
+    })
+</script>
+
+<!--Q5-->
+
+<input type="text" id="no1">
+<input type="text" id="no2">
+<button id="button1">press</button>
+<p id="alltogether"></p>
+
+<script>
+    document.getElementById('button1').addEventListener('click',function(){
+        var text1= document.getElementById('no1').value;
+        var text2= document.getElementById('no2').value;
+        document.getElementById('alltogether').innerText= text1 + text2;
+    })
+</script>
+
+<!--Q6-->
+
+<button id="changecolor">Chang Background</button>
+<div id="colorbox" style="background-color: blue;"></div>
+
+<script>
+    document.getElementById('changecolor').addEventListener('click', function(){
+    document.getElementById('colorbox').style.backgroundColor='pink';
+    })
+</script>
+
+</body>
+    </html>
